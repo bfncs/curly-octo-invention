@@ -41,66 +41,24 @@ https://github.com/sipgate/sipgate.io
 
 ## Troubleshooting
 
----
-title: "Troubleshooting"
-excerpt: ""
----
-Enable debug log
-==============
+### Enable debug log
 
 You can enable logging for debugging purposes from your dashboard. You will find each request and the corresponding response in the logging table.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/c46ea71-debug-sipgate-io-step1.png",
-        "debug-sipgate-io-step1.png",
-        1920,
-        948,
-        "#1c242c"
-      ],
-      "caption": "Click on \"Activate debug log\", read and confirm the security warning."
-    }
-  ]
-}
-[/block]
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/aee6e20-debug-sipgate-io-step3.png",
-        "debug-sipgate-io-step3.png",
-        1920,
-        946,
-        "#1c242c"
-      ],
-      "caption": "To view the logged requests, click on the icon within the \"Activate debug log\" row."
-    }
-  ]
-}
-[/block]
+![Click on "Activate debug log", read and confirm the security warning.](./img/debug-sipgate-io-step1.png)
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/272c904-debug-sipgate-io-step3.png",
-        "debug-sipgate-io-step3.png",
-        1920,
-        939,
-        "#cccdce"
-      ],
-      "caption": "Your request should be logged and look like this."
-    }
-  ]
-}
-[/block]
-Inspect incoming network traffic
-========================
+Click on "Activate debug log", read and confirm the security warning.
+
+![To view the logged requests, click on the icon within the "Activate debug log" row.](./img/debug-sipgate-io-step2.png)
+
+To view the logged requests, click on the icon within the "Activate debug log" row.
+
+
+![Your request should be logged and look like this.](./img/debug-sipgate-io-step3.png)
+
+Your request should be logged and look like this.
+
+### Inspect incoming network traffic
 
 You can use `ngrep` to inspect incoming requests 
 ```shell
