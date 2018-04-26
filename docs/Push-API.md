@@ -10,7 +10,7 @@ To begin developing applications using webhooks you first need to create a sigpg
 
 We will now show you how to book sipgate.io using the Feature Store.
 
-![Book sipgate.io](./img/sipgate-io-step1.png)
+![Book sipgate.io](./img/configure-sipgate-io-step1.png)
 
 Log into your shiny, new sipgate account and go to the Feature Store. You can find a link in the navigation.
 
