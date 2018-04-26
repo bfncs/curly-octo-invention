@@ -275,6 +275,87 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#a-word-about-security" title="A word about security" class="md-nav__link">
+    A word about security
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http-vs-https" title="HTTP vs. HTTPS" class="md-nav__link">
+    HTTP vs. HTTPS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication" title="Authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" title="FAQ" class="md-nav__link">
+    FAQ
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-happens-when-a-call-is-transferred" title="What happens when a call is transferred?" class="md-nav__link">
+    What happens when a call is transferred?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-is-forwarding-signaled" title="How is forwarding signaled?" class="md-nav__link">
+    How is forwarding signaled?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-get-a-lot-of-event-during-forwards-and-transfers-do-i-have-to-pay-for-all-of-them" title="I get a lot of event during forwards and transfers, do I have to pay for all of them?" class="md-nav__link">
+    I get a lot of event during forwards and transfers, do I have to pay for all of them?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-ngrok-for-local-development" title="Setting up ngrok for local development" class="md-nav__link">
+    Setting up ngrok for local development
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#make-your-project-accessible-from-the-internet" title="Make your project accessible from the internet" class="md-nav__link">
+    Make your project accessible from the internet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -386,6 +467,87 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#a-word-about-security" title="A word about security" class="md-nav__link">
+    A word about security
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http-vs-https" title="HTTP vs. HTTPS" class="md-nav__link">
+    HTTP vs. HTTPS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication" title="Authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" title="FAQ" class="md-nav__link">
+    FAQ
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-happens-when-a-call-is-transferred" title="What happens when a call is transferred?" class="md-nav__link">
+    What happens when a call is transferred?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-is-forwarding-signaled" title="How is forwarding signaled?" class="md-nav__link">
+    How is forwarding signaled?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-get-a-lot-of-event-during-forwards-and-transfers-do-i-have-to-pay-for-all-of-them" title="I get a lot of event during forwards and transfers, do I have to pay for all of them?" class="md-nav__link">
+    I get a lot of event during forwards and transfers, do I have to pay for all of them?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-ngrok-for-local-development" title="Setting up ngrok for local development" class="md-nav__link">
+    Setting up ngrok for local development
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#make-your-project-accessible-from-the-internet" title="Make your project accessible from the internet" class="md-nav__link">
+    Make your project accessible from the internet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -470,6 +632,78 @@ Connection: keep-alive.
 &lt;Response&gt;&lt;Dial&gt;&lt;Voicemail/&gt;&lt;/Dial&gt;&lt;/Response&gt;
 #
 </code></pre>
+
+<h2 id="a-word-about-security">A word about security</h2>
+<h3 id="http-vs-https">HTTP vs. HTTPS</h3>
+<p>We strongly encourage you to use a HTTPS server. Although we support plain HTTP connections we do not recommend pushing sensitive call details over unencrypted connections. By default sipgate.io does not accept <a href="http://stackoverflow.com/a/10176685">self-signed certificates</a>. If you use simquadrat or sipgate basic, you can allow self-signed certs in your dashboard. In sipgate team you cannot make an exception.</p>
+<p>Furthermore, you can add your public certificate to protect the connection against man-in-the-middle attacks. Your certificate is validated by our server.</p>
+<p>In order to work your certificate has to be in the following format</p>
+<pre><code>-----BEGIN CERTIFICATE-----
+MIIDXTCCAkWgAwIBAgIJAJC1HiIAZAiIMA0GCSqGSIb3Df
+BAYTAkFVMRMwEQYDVQQIDApTb21lLVN0YXRlMSEwHwYDVx
+aWRnaXRzIFB0eSBMdGQwHhcNMTExMjMxMDg1OTQ0WhcNMT
+A .... MANY LINES LIKE THAT ....
+JjyzfN746vaInA1KxYEeI1Rx5KXY8zIdj6a7hhphpj2E04
+C3Fayua4DRHyZOLmlvQ6tIChY0ClXXuefbmVSDeUHwc8Yu
+B7xxt8BVc69rLeHV15A0qyx77CLSj3tCx2IUXVqRs5mlSb
+vA==
+-----END CERTIFICATE-----
+</code></pre>
+
+<h3 id="authentication">Authentication</h3>
+<p>sipgate.io supports HTTP Basic Authentication. You can include your username and password within the URL (e.g. <code>https://username:password@example.com:8080</code>).</p>
+<h2 id="faq">FAQ</h2>
+<h3 id="what-happens-when-a-call-is-transferred">What happens when a call is transferred?</h3>
+<p>The transferred call is a new call. Scenario: Jennifer calls Doc Brown and Doc Brown transfers the call to Marty and Marty picks up. 
+ Here's what sipgate.io sends to your server:</p>
+<ol>
+<li><code>newCall (user: Doc, callId: 12111955)</code></li>
+<li><code>answer (user: Doc, callId: 12111955)</code></li>
+<li><code>[Doc dials *3 &lt;Marty's extension&gt;]</code></li>
+<li><code>newCall (user: Marty, callId: 21102015, diversion: &lt;Doc's number&gt; from: &lt;Jennifer's number&gt;)</code></li>
+<li><code>answer (user: Marty, callId: 21102015, diversion: &lt;Doc's number&gt; from: &lt;Jennifer's number&gt;)</code></li>
+<li><code>hangup (user: Doc, callId: 12111955)</code></li>
+</ol>
+<p>As you can see, the <code>callId</code> changes with the transfer.</p>
+<p>This is what sipgate.io sends, in case Marty does not pick up:</p>
+<ol>
+<li><code>newCall (user: Doc, callId: 12111955)</code></li>
+<li><code>answer (user: Doc, callId: 12111955)</code></li>
+<li><code>[Doc dials *3 &lt;Marty's extension&gt;]</code></li>
+<li><code>newCall (user: Marty, callId: 21102015, diversion: &lt;Doc's number&gt; from: &lt;Jennifer's number&gt;)</code></li>
+<li><code>hangup (user: Marty, callId: 21102015)</code></li>
+</ol>
+<h3 id="how-is-forwarding-signaled">How is forwarding signaled?</h3>
+<p>The forwarded call is handled as a new call. Let's assume the previous scenario: Jennifer calls Doc Brown but his line is busy so the call is forwarded to Marty who in turn picks up the call.<br />
+Here are the pushes sipgate.io will send to your server:</p>
+<ol>
+<li><code>newCall (user: Doc, callId: 12111955)</code></li>
+<li><code>hangup (cause: forwarded, callId: 12111955)</code></li>
+<li><code>newCall (user: Marty, callId: 21102015, diversion: &lt;Doc's number&gt; from: &lt;Jennifer's number&gt;)</code></li>
+<li><code>answer (user: Marty, callId: 21102015, diversion: &lt;Doc's number&gt; from: &lt;Jennifer's number&gt;)</code></li>
+<li><code>hangup (user: Marty, callId: 21102015)</code></li>
+</ol>
+<h3 id="i-get-a-lot-of-event-during-forwards-and-transfers-do-i-have-to-pay-for-all-of-them">I get a lot of event during forwards and transfers, do I have to pay for all of them?</h3>
+<p>The answer is: It depends.<br />
+If you transfer or forward a call within the same sipgate account then the answer is no. But if you forward or transfer a call to a different sipgate account or an external number then those pushes are being billed to your account.</p>
+<h2 id="setting-up-ngrok-for-local-development">Setting up ngrok for local development</h2>
+<h3 id="make-your-project-accessible-from-the-internet">Make your project accessible from the internet</h3>
+<p>The sipgate.io API cannot reach your project if the computer running it is behind a firewall. An easy way to circumvent this impediment is a tunnel service. <a href="https://ngrok.com">Ngrok</a> is easy to use and offers a free service which is sufficient for our needs. Download and run ngrok now, to make your project available from the internet.</p>
+<p>Download ngrok for linux (amd64)</p>
+<pre><code class="shell">wget https://dl.ngrok.com/ngrok_2.0.17_linux_amd64.zip -O ngrok.zip
+</code></pre>
+
+<p>Download ngrok for osx</p>
+<pre><code class="shell">wget https://dl.ngrok.com/ngrok_2.0.17_darwin_amd64.zip -O ngrok.zip
+</code></pre>
+
+<p>Run ngrok</p>
+<pre><code class="shell">unzip ngrok.zip
+./ngrok http 9000
+</code></pre>
+
+<p><img alt="Ngrok running" src="../img/ngrok-running.png" /></p>
+<p>Ngrok builds the tunnel and shows the newly generated tunnel url. This url changes with every restart of ngrok. In this example our project is reachable on https://12345678.ngrok.io/.</p>
                 
                   
                 
