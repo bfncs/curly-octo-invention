@@ -302,15 +302,77 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#using-oauth-20-authentication" title="Using OAuth 2.0 authentication" class="md-nav__link">
+    Using OAuth 2.0 authentication
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-get-all-running-calls" title="How to get all running calls" class="md-nav__link">
+    How to get all running calls
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-put-a-call-on-hold" title="How to put a call on hold" class="md-nav__link">
+    How to put a call on hold
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-muteunmute-a-call" title="How to mute/unmute a call" class="md-nav__link">
+    How to mute/unmute a call
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-transfer-a-call" title="How to transfer a call" class="md-nav__link">
+    How to transfer a call
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-record-a-call" title="How to record a call" class="md-nav__link">
+    How to record a call
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-send-dtmf-dual-tone-multi-frequency-sequences" title="How to send DTMF (Dual-tone multi-frequency) sequences" class="md-nav__link">
+    How to send DTMF (Dual-tone multi-frequency) sequences
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-play-an-audio-file" title="How to play an audio file" class="md-nav__link">
+    How to play an audio file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-hang-up-a-call" title="How to hang up a call" class="md-nav__link">
+    How to hang up a call
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#using-oauth-20-authentication" title="Using OAuth 2.0 authentication" class="md-nav__link">
-    Using OAuth 2.0 authentication
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -428,15 +490,77 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#using-oauth-20-authentication" title="Using OAuth 2.0 authentication" class="md-nav__link">
+    Using OAuth 2.0 authentication
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-get-all-running-calls" title="How to get all running calls" class="md-nav__link">
+    How to get all running calls
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-put-a-call-on-hold" title="How to put a call on hold" class="md-nav__link">
+    How to put a call on hold
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-muteunmute-a-call" title="How to mute/unmute a call" class="md-nav__link">
+    How to mute/unmute a call
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-transfer-a-call" title="How to transfer a call" class="md-nav__link">
+    How to transfer a call
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-record-a-call" title="How to record a call" class="md-nav__link">
+    How to record a call
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-send-dtmf-dual-tone-multi-frequency-sequences" title="How to send DTMF (Dual-tone multi-frequency) sequences" class="md-nav__link">
+    How to send DTMF (Dual-tone multi-frequency) sequences
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-play-an-audio-file" title="How to play an audio file" class="md-nav__link">
+    How to play an audio file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-hang-up-a-call" title="How to hang up a call" class="md-nav__link">
+    How to hang up a call
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#using-oauth-20-authentication" title="Using OAuth 2.0 authentication" class="md-nav__link">
-    Using OAuth 2.0 authentication
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -836,136 +960,147 @@ https://api.sipgate.com/login/sipgate-apps/protocol/openid-connect/token
 <pre><code>{&quot;token&quot;:&quot;eyJ0eXAiOiJKV1....&quot;}
 </code></pre>
 
-<h2 id="using-oauth-20-authentication">Using OAuth 2.0 authentication</h2>
+<h3 id="using-oauth-20-authentication">Using OAuth 2.0 authentication</h3>
 <p>Read the chapter on <a href="doc:authentication">OAuth 2.0 Authentication</a> to obtain an <code>access_token</code>.</p>
-<h1 id="how-to-get-all-running-calls">How to get all running calls</h1>
-<p>You only need your <code>access_token</code> to call the <a href="../v2.0/reference#getcalls">/calls</a> endpoint.
-[block:code]
-{
-  "codes": [
-    {
-      "code": "curl \\n--verbose \\n--request GET \\n--header \"Authorization: Bearer <access_token>\" \\n--header \"Content-Type: application/json\" \\n--url https://api.sipgate.com/v2/calls",
-      "language": "shell"
-    }
-  ]
-}
-[/block]
-How to put a call on hold
-====================</p>
-<p>You can put all call participants on hold or retrieve them by using the <a href="../v1.0/reference#setcallhold">/calls/{callId}/hold</a> endpoint. All you need is the <code>callId</code> and your <code>access_token</code>:
-[block:code]
-{
-  "codes": [
-    {
-      "code": "# Hold                                           \ncurl \\n--verbose \                                   \n--request PUT \ \n--header \"Authorization: Bearer <access_token>\" \       \n--header \"Content-Type: application/json\" \\n--url https://api.sipgate.com/v2/calls/<callId>/hold \\n--data '{ \"value\": true }'                                                                                                                                                                                                                                   \n# Retrieve\ncurl \                                              \n--verbose \\n--request PUT \\n--header \"Authorization: Bearer <access_token>\" \\n--header \"Content-Type: application/json\" \\n--url https://api.sipgate.com/v2/calls/<callId>/hold \\n--data '{ \"value\": false }'",
-      "language": "shell"
-    }
-  ]
-}
-[/block]
-How to mute/unmute a call
-=====================</p>
-<p>You can use the <a href="../v2.0/reference#setcallmuted">/calls/{callId}/muted</a> endpoint to mute or unmute your microphone. All you need is the <code>callId</code> and your <code>access_token</code>:
-[block:code]
-{
-  "codes": [
-    {
-      "code": "# Mute\ncurl \\n--verbose \\n--request PUT \\n--header \"Authorization: Bearer <access_token>\" \\n--header \"Content-Type: application/json\" \\n--url https://api.sipgate.com/v2/calls/<callId>/muted \\n--data '{ \"value\": true }'\n\n# Unmute\ncurl \\n--verbose \\n--request PUT \\n--header \"Authorization: Bearer <access_token>\" \\n--header \"Content-Type: application/json\" \\n--url https://api.sipgate.com/v2/calls/<callId>/muted \\n--data '{ \"value\": false }'",
-      "language": "shell"
-    }
-  ]
-}
-[/block]
-How to transfer a call
-=================</p>
-<p>You can use the <a href="../v2.0/reference#transfercall">/calls/{callId}/transfer</a> endpoint to transfer your call to another party. You can choose between attended transfer and blind transfer. All you need is the <code>callId</code> and your <code>access_token</code>:
-[block:code]
-{
-  "codes": [
-    {
-      "code": "# Attended transfer\ncurl \\n--verbose \\n--request POST \\n--header \"Authorization: Bearer <access_token>\" \\n--header \"Content-Type: application/json\" \\n--url https://api.sipgate.com/v2/calls/<callId>/transfer \\n--data '{ \"attended\": true, \"phoneNumber\": \"+4915799912345\" }'\n\n# Blind transfer\ncurl \\n--verbose \\n--request POST \\n--header \"Authorization: Bearer <access_token>\" \\n--header \"Content-Type: application/json\" \\n--url https://api.sipgate.com/v2/calls/<callId>/transfer \\n--data '{ \"attended\": false, \"phoneNumber\": \"+4915799912345\" }'",
-      "language": "shell"
-    }
-  ]
-}
-[/block]
-How to record a call
-=================</p>
+<h4 id="how-to-get-all-running-calls">How to get all running calls</h4>
+<p>You only need your <code>access_token</code> to call the <a href="../v2.0/reference#getcalls">/calls</a> endpoint.</p>
+<pre><code class="bash">curl \
+--verbose \
+--request GET \
+--header &quot;Authorization: Bearer &lt;access_token&gt;&quot; \
+--header &quot;Content-Type: application/json&quot; \
+--url https://api.sipgate.com/v2/calls
+</code></pre>
+
+<h4 id="how-to-put-a-call-on-hold">How to put a call on hold</h4>
+<p>You can put all call participants on hold or retrieve them by using the <a href="../v1.0/reference#setcallhold">/calls/{callId}/hold</a> endpoint. All you need is the <code>callId</code> and your <code>access_token</code>:</p>
+<pre><code class="bash"># Hold                                           
+curl \
+--verbose \                                   
+--request PUT \ 
+--header &quot;Authorization: Bearer &lt;access_token&gt;&quot; \       
+--header &quot;Content-Type: application/json&quot; \
+--url https://api.sipgate.com/v2/calls/&lt;callId&gt;/hold \
+--data '{ &quot;value&quot;: true }'                                                                                                                                                                                                                                   
+# Retrieve
+curl \                                              
+--verbose \
+--request PUT \
+--header &quot;Authorization: Bearer &lt;access_token&gt;&quot; \
+--header &quot;Content-Type: application/json&quot; \
+--url https://api.sipgate.com/v2/calls/&lt;callId&gt;/hold \
+--data '{ &quot;value&quot;: false }'
+</code></pre>
+
+<h4 id="how-to-muteunmute-a-call">How to mute/unmute a call</h4>
+<p>You can use the <a href="../v2.0/reference#setcallmuted">/calls/{callId}/muted</a> endpoint to mute or unmute your microphone. All you need is the <code>callId</code> and your <code>access_token</code>:</p>
+<pre><code class="bash"># Mute
+curl \
+--verbose \
+--request PUT \
+--header &quot;Authorization: Bearer &lt;access_token&gt;&quot; \
+--header &quot;Content-Type: application/json&quot; \
+--url https://api.sipgate.com/v2/calls/&lt;callId&gt;/muted \
+--data '{ &quot;value&quot;: true }'
+
+# Unmute
+curl \
+--verbose \
+--request PUT \
+--header &quot;Authorization: Bearer &lt;access_token&gt;&quot; \
+--header &quot;Content-Type: application/json&quot; \
+--url https://api.sipgate.com/v2/calls/&lt;callId&gt;/muted \
+--data '{ &quot;value&quot;: false }'
+</code></pre>
+
+<h4 id="how-to-transfer-a-call">How to transfer a call</h4>
+<p>You can use the <a href="../v2.0/reference#transfercall">/calls/{callId}/transfer</a> endpoint to transfer your call to another party. You can choose between attended transfer and blind transfer. All you need is the <code>callId</code> and your <code>access_token</code>:</p>
+<pre><code class="bash"># Attended transfer
+curl \
+--verbose \
+--request POST \
+--header &quot;Authorization: Bearer &lt;access_token&gt;&quot; \
+--header &quot;Content-Type: application/json&quot; \
+--url https://api.sipgate.com/v2/calls/&lt;callId&gt;/transfer \
+--data '{ &quot;attended&quot;: true, &quot;phoneNumber&quot;: &quot;+4915799912345&quot; }'
+
+# Blind transfer
+curl \
+--verbose \
+--request POST \
+--header &quot;Authorization: Bearer &lt;access_token&gt;&quot; \
+--header &quot;Content-Type: application/json&quot; \
+--url https://api.sipgate.com/v2/calls/&lt;callId&gt;/transfer \
+--data '{ &quot;attended&quot;: false, &quot;phoneNumber&quot;: &quot;+4915799912345&quot; }'
+</code></pre>
+
+<h4 id="how-to-record-a-call">How to record a call</h4>
 <p>Use the <a href="../v2.0/reference#setcallrecording">/calls/{callId}/recording</a> endpoint to record a running call. 
 Pass <code>"value": true</code> to start the recording and <code>"value": false</code> to stop it.
-You can enable/disable the recording announcement by passing the <code>announcement</code> flag.
-[block:code]
-{
-  "codes": [
-    {
-      "code": "# Start recording with announcement\ncurl \\n--verbose \\n--request PUT \\n--header 'Authorization: Bearer <access_token>' \\n--header 'Content-Type: application/json' \\n--url https://api.sipgate.com/v2/calls/<callId>/recording \\n--data '{ \"value\": true, \"announcement\": true }'\n\n# Stop recording without announcement\ncurl \\n--verbose \\n--request PUT \\n--header 'Authorization: Bearer <access_token>' \\n--header 'Content-Type: application/json' \\n--url https://api.sipgate.com/v2/calls/<callId>/recording \\n--data '{ \"value\": false, \"announcement\": false }'",
-      "language": "shell"
-    }
-  ]
-}
-[/block]
-To retrieve the recorded file you can use the <a href="https://developer.sipgate.io/v2.0/reference#history">/v2/{userId}/history</a> endpoint (see <code>recordingUrl</code>). 
-[block:code]
-{
-  "codes": [
-    {
-      "code": "curl \\n--verbose \\n--header \"Authorization: Bearer <access_token>\" \\n--header \"Content-Type: application/json\" \\n--url https://api.sipgate.com/v2/<userId>/history?types=CALL",
-      "language": "shell"
-    }
-  ]
-}
-[/block]
-How to send DTMF (Dual-tone multi-frequency) sequences
-=================</p>
-<p>Use the <a href="../v2.0/reference#sendcalldtmf">/calls/{callId}/dtmf</a> endpoint to send a DTMF sequence to a running call:
-[block:code]
-{
-  "codes": [
-    {
-      "code": "curl \\n--verbose \\n--request POST \\n--header \"Authorization: Bearer <access_token>\" \\n--header \"Content-Type: application/json\" \\n--url https://api.sipgate.com/v2/calls/<callId>/dtmf \\n--data '{ \"sequence\": \"*12345#\" }'",
-      "language": "shell"
-    }
-  ]
-}
-[/block]
-How to play an audio file
-===================</p>
-<p>You can inject any WAV file into a running call by using the <a href="../v2.0/reference#startcallannouncement">/calls/{callId}/announcements</a> endpoint. All you need is the <code>callId</code>, a WAV file and your <code>access_token</code>:
-[block:code]
-{
-  "codes": [
-    {
-      "code": "curl \\n--verbose \\n--request POST \\n--header \"Authorization: Bearer <access_token>\" \\n--header \"Content-Type: application/json\" \\n--url https://api.sipgate.com/v2/calls/<callId>/announcements \\n--data '{ \"url\": \"https://static.sipgate.com/examples/wav/example.wav\" }'",
-      "language": "shell"
-    }
-  ]
-}
-[/block]
-<strong>Please note:</strong> Currently the sound file needs to be a mono 16bit PCM WAV file with a sampling rate of 8kHz. You can use conversion tools like the open source audio editor <a href="http://www.audacityteam.org/">Audacity</a> to convert any sound file to the correct format.</p>
-<p>Alternatively you could convert the file using <code>mpg123</code> on the command line:
-[block:code]
-{
-  "codes": [
-    {
-      "code": "mpg123 --rate 8000 --mono -w output.wav input.mp3",
-      "language": "shell"
-    }
-  ]
-}
-[/block]
-How to hang up a call
-=================</p>
+You can enable/disable the recording announcement by passing the <code>announcement</code> flag.</p>
+<pre><code class="bash"># Start recording with announcement
+curl \
+--verbose \
+--request PUT \
+--header 'Authorization: Bearer &lt;access_token&gt;' \
+--header 'Content-Type: application/json' \
+--url https://api.sipgate.com/v2/calls/&lt;callId&gt;/recording \
+--data '{ &quot;value&quot;: true, &quot;announcement&quot;: true }'
+
+# Stop recording without announcement
+curl \
+--verbose \
+--request PUT \
+--header 'Authorization: Bearer &lt;access_token&gt;' \
+--header 'Content-Type: application/json' \
+--url https://api.sipgate.com/v2/calls/&lt;callId&gt;/recording \
+--data '{ &quot;value&quot;: false, &quot;announcement&quot;: false }'
+</code></pre>
+
+<p>To retrieve the recorded file you can use the <a href="https://developer.sipgate.io/v2.0/reference#history">/v2/{userId}/history</a> endpoint (see <code>recordingUrl</code>). </p>
+<pre><code class="bash">curl \
+--verbose \
+--header &quot;Authorization: Bearer &lt;access_token&gt;&quot; \
+--header &quot;Content-Type: application/json&quot; \
+--url https://api.sipgate.com/v2/&lt;userId&gt;/history?types=CALL
+</code></pre>
+
+<h4 id="how-to-send-dtmf-dual-tone-multi-frequency-sequences">How to send DTMF (Dual-tone multi-frequency) sequences</h4>
+<p>Use the <a href="../v2.0/reference#sendcalldtmf">/calls/{callId}/dtmf</a> endpoint to send a DTMF sequence to a running call:</p>
+<pre><code class="bash">curl \
+--verbose \
+--request POST \
+--header &quot;Authorization: Bearer &lt;access_token&gt;&quot; \
+--header &quot;Content-Type: application/json&quot; \
+--url https://api.sipgate.com/v2/calls/&lt;callId&gt;/dtmf \
+--data '{ &quot;sequence&quot;: &quot;*12345#&quot; }'
+</code></pre>
+
+<h4 id="how-to-play-an-audio-file">How to play an audio file</h4>
+<p>You can inject any WAV file into a running call by using the <a href="../v2.0/reference#startcallannouncement">/calls/{callId}/announcements</a> endpoint. All you need is the <code>callId</code>, a WAV file and your <code>access_token</code>:</p>
+<pre><code class="bash">curl \
+--verbose \
+--request POST \
+--header &quot;Authorization: Bearer &lt;access_token&gt;&quot; \
+--header &quot;Content-Type: application/json&quot; \
+--url https://api.sipgate.com/v2/calls/&lt;callId&gt;/announcements \
+--data '{ &quot;url&quot;: &quot;https://static.sipgate.com/examples/wav/example.wav&quot; }'
+</code></pre>
+
+<p><strong>Please note:</strong> Currently the sound file needs to be a mono 16bit PCM WAV file with a sampling rate of 8kHz. You can use conversion tools like the open source audio editor <a href="http://www.audacityteam.org/">Audacity</a> to convert any sound file to the correct format.</p>
+<p>Alternatively you could convert the file using <code>mpg123</code> on the command line:</p>
+<pre><code class="bash">mpg123 --rate 8000 --mono -w output.wav input.mp3
+</code></pre>
+
+<h4 id="how-to-hang-up-a-call">How to hang up a call</h4>
 <p>Use the <a href="../v2.0/reference#hangupcall">DELETE /calls/{callId}</a> endpoint to terminate a running call. All you need is the <code>callId</code> and your <code>access_token</code>:</p>
-<p>[block:code]
-{
-  "codes": [
-    {
-      "code": "curl \\n--verbose \\n--request DELETE \\n--header \"Authorization: Bearer <access_token>\" \\n--header \"Content-Type: application/json\" \\n--url https://api.sipgate.com/v2/calls/<callId>",
-      "language": "shell"
-    }
-  ]
-}
-[/block]</p>
+<pre><code class="bash">curl \
+--verbose \
+--request DELETE \
+--header &quot;Authorization: Bearer &lt;access_token&gt;&quot; \
+--header &quot;Content-Type: application/json&quot; \
+--url https://api.sipgate.com/v2/calls/&lt;callId&gt;
+</code></pre>
                 
                   
                 
