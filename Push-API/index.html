@@ -33,7 +33,7 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../img/favicon.ico">
       <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.3">
     
     
@@ -43,6 +43,8 @@
     
     
       <link rel="stylesheet" href="../assets/stylesheets/application.8d40d89b.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.6079476c.css">
       
     
     
@@ -60,7 +62,9 @@
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="">
   
     <svg class="md-svg">
       <defs>
@@ -83,7 +87,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href=".." title="sipgate Developer" class="md-header-nav__button md-logo">
           
-            <i class="md-icon"></i>
+            <img src="../img/logo.png" width="24" height="24">
           
         </a>
       </div>
@@ -144,6 +148,54 @@
         
       
       
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." title="Overview" class="md-tabs__link">
+        Overview
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" title="Push API" class="md-tabs__link md-tabs__link--active">
+          Push API
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../REST-API/" title="REST API" class="md-tabs__link">
+          REST API
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
       <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -155,7 +207,7 @@
   <label class="md-nav__title md-nav__title--site" for="drawer">
     <span class="md-nav__button md-logo">
       
-        <i class="md-icon"></i>
+        <img src="../img/logo.png" width="48" height="48">
       
     </span>
     sipgate Developer
@@ -178,6 +230,27 @@
       
       
       
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Push API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Push API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
 
   
 
@@ -366,16 +439,45 @@
     
   </li>
 
+        
+      </ul>
+    </nav>
+  </li>
+
     
       
       
       
 
 
-  <li class="md-nav__item">
-    <a href="../REST-API/" title="REST API" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
       REST API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        REST API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../REST-API/" title="Home" class="md-nav__link">
+      Home
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -571,28 +673,28 @@
 <p>To begin developing applications using webhooks you first need to create a sigpgate account. There are different types of accounts: basic, simquadrat and team. All are slightly different but offer webhooks functionality. For the following examples we choose <a href="https://www.sipgatebasic.co.uk">sipgate basic</a> because it's free (as in beer).</p>
 <h3 id="book-sipgateio">Book sipgate.io</h3>
 <p>We will now show you how to book sipgate.io using the Feature Store.</p>
-<p><img alt="Book sipgate.io" src="../img/configure-sipgate-io-step1.png" /></p>
+<p><img alt="Book sipgate.io" src="./../img/configure-sipgate-io-step1.png" /></p>
 <p>Log into your shiny, new sipgate account and go to the Feature Store. You can find a link in the navigation.</p>
-<p><img alt="Within the Feature Store click on the sipgate.io feature. It should look like this." src="../img/configure-sipgate-io-step2.png" /></p>
+<p><img alt="Within the Feature Store click on the sipgate.io feature. It should look like this." src="./../img/configure-sipgate-io-step2.png" /></p>
 <p>Within the Feature Store click on the sipgate.io feature. It should look like this.</p>
-<p><img alt="Click on the orange button to book the free feature and follow the confirmation process." src="../img/configure-sipgate-io-step3.png" /></p>
+<p><img alt="Click on the orange button to book the free feature and follow the confirmation process." src="./../img/configure-sipgate-io-step3.png" /></p>
 <p>Click on the orange button to book the free feature and follow the confirmation process.</p>
 <h3 id="enable-webhooks">Enable webhooks</h3>
 <p>We will now show you how to configure your URLs.</p>
-<p><img alt="Navigate to the sipgate.io category and click on &quot;Incoming calls&quot; or &quot;Outgoing calls&quot;." src="../img/configure-sipgate-io-step4.png" /></p>
+<p><img alt="Navigate to the sipgate.io category and click on &quot;Incoming calls&quot; or &quot;Outgoing calls&quot;." src="./../img/configure-sipgate-io-step4.png" /></p>
 <p>Navigate to the sipgate.io category and click on "Incoming calls" or "Outgoing calls"</p>
-<p><img alt="Enter your URL and hit &quot;Save&quot;." src="../img/configure-sipgate-io-step5.png" /></p>
+<p><img alt="Enter your URL and hit &quot;Save&quot;." src="./../img/configure-sipgate-io-step5.png" /></p>
 <p>Enter your URL and hit "Save".</p>
 <h2 id="api-reference-examples">API Reference &amp; Examples</h2>
 <p>https://github.com/sipgate/sipgate.io</p>
 <h2 id="troubleshooting">Troubleshooting</h2>
 <h3 id="enable-debug-log">Enable debug log</h3>
 <p>You can enable logging for debugging purposes from your dashboard. You will find each request and the corresponding response in the logging table.</p>
-<p><img alt="Click on &quot;Activate debug log&quot;, read and confirm the security warning." src="../img/debug-sipgate-io-step1.png" /></p>
+<p><img alt="Click on &quot;Activate debug log&quot;, read and confirm the security warning." src="./../img/debug-sipgate-io-step1.png" /></p>
 <p>Click on "Activate debug log", read and confirm the security warning.</p>
-<p><img alt="To view the logged requests, click on the icon within the &quot;Activate debug log&quot; row." src="../img/debug-sipgate-io-step2.png" /></p>
+<p><img alt="To view the logged requests, click on the icon within the &quot;Activate debug log&quot; row." src="./../img/debug-sipgate-io-step2.png" /></p>
 <p>To view the logged requests, click on the icon within the "Activate debug log" row.</p>
-<p><img alt="Your request should be logged and look like this." src="../img/debug-sipgate-io-step3.png" /></p>
+<p><img alt="Your request should be logged and look like this." src="./../img/debug-sipgate-io-step3.png" /></p>
 <p>Your request should be logged and look like this.</p>
 <h3 id="inspect-incoming-network-traffic">Inspect incoming network traffic</h3>
 <p>You can use <code>ngrep</code> to inspect incoming requests </p>
@@ -702,7 +804,7 @@ If you transfer or forward a call within the same sipgate account then the answe
 ./ngrok http 9000
 </code></pre>
 
-<p><img alt="Ngrok running" src="../img/ngrok-running.png" /></p>
+<p><img alt="Ngrok running" src="./img/ngrok-running.png" /></p>
 <p>Ngrok builds the tunnel and shows the newly generated tunnel url. This url changes with every restart of ngrok. In this example our project is reachable on https://12345678.ngrok.io/.</p>
                 
                   
@@ -739,13 +841,13 @@ If you transfer or forward a call within the same sipgate account then the answe
           </a>
         
         
-          <a href="../REST-API/" title="REST API" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../REST-API/" title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                REST API
+                Home
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

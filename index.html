@@ -33,7 +33,7 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="./assets/images/favicon.png">
+      <link rel="shortcut icon" href="./img/favicon.ico">
       <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.3">
     
     
@@ -43,6 +43,8 @@
     
     
       <link rel="stylesheet" href="./assets/stylesheets/application.8d40d89b.css">
+      
+        <link rel="stylesheet" href="./assets/stylesheets/application-palette.6079476c.css">
       
     
     
@@ -60,7 +62,9 @@
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="">
   
     <svg class="md-svg">
       <defs>
@@ -83,7 +87,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="." title="sipgate Developer" class="md-header-nav__button md-logo">
           
-            <i class="md-icon"></i>
+            <img src="./img/logo.png" width="24" height="24">
           
         </a>
       </div>
@@ -144,6 +148,52 @@
         
       
       
+        
+
+<nav class="md-tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="." title="Overview" class="md-tabs__link md-tabs__link--active">
+        Overview
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="Push-API/" title="Push API" class="md-tabs__link">
+          Push API
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="REST-API/" title="REST API" class="md-tabs__link">
+          REST API
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
       <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -155,7 +205,7 @@
   <label class="md-nav__title md-nav__title--site" for="drawer">
     <span class="md-nav__button md-logo">
       
-        <i class="md-icon"></i>
+        <img src="./img/logo.png" width="48" height="48">
       
     </span>
     sipgate Developer
@@ -232,10 +282,34 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="Push-API/" title="Push API" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
       Push API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Push API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="Push-API/" title="Home" class="md-nav__link">
+      Home
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -244,10 +318,34 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="REST-API/" title="REST API" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
       REST API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        REST API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="REST-API/" title="Home" class="md-nav__link">
+      Home
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -310,7 +408,7 @@
                 
                 
                 <h1 id="overview">Overview</h1>
-<h2 id="rest-api"><a href="REST-API/">REST API</a></h2>
+<h2 id="rest-api"><a href="REST-API/REST-API.md">REST API</a></h2>
 <p>We build our applications using this API and we invite you to use it too. Check out our Endpoint Reference.</p>
 <h2 id="push-api">Push API</h2>
 <p>sipgate.io passes call meta data to your web server in real-time. Check out the official documentation.</p>
@@ -337,13 +435,13 @@
       <nav class="md-footer-nav__inner md-grid">
         
         
-          <a href="Push-API/" title="Push API" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="Push-API/" title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Push API
+                Home
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

@@ -33,7 +33,7 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../img/favicon.ico">
       <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.3">
     
     
@@ -43,6 +43,8 @@
     
     
       <link rel="stylesheet" href="../assets/stylesheets/application.8d40d89b.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.6079476c.css">
       
     
     
@@ -60,7 +62,9 @@
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="">
   
     <svg class="md-svg">
       <defs>
@@ -83,7 +87,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href=".." title="sipgate Developer" class="md-header-nav__button md-logo">
           
-            <i class="md-icon"></i>
+            <img src="../img/logo.png" width="24" height="24">
           
         </a>
       </div>
@@ -144,6 +148,54 @@
         
       
       
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." title="Overview" class="md-tabs__link">
+        Overview
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Push-API/" title="Push API" class="md-tabs__link">
+          Push API
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" title="REST API" class="md-tabs__link md-tabs__link--active">
+          REST API
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
       <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -155,7 +207,7 @@
   <label class="md-nav__title md-nav__title--site" for="drawer">
     <span class="md-nav__button md-logo">
       
-        <i class="md-icon"></i>
+        <img src="../img/logo.png" width="48" height="48">
       
     </span>
     sipgate Developer
@@ -180,16 +232,61 @@
       
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Push API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Push API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
     <a href="../Push-API/" title="Push API" class="md-nav__link">
       Push API
     </a>
   </li>
 
+        
+      </ul>
+    </nav>
+  </li>
+
     
       
       
       
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      REST API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        REST API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
 
   
 
@@ -384,6 +481,11 @@
   
 </nav>
     
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -608,7 +710,7 @@ https://api.sipgate.com/v2/sessions/sms
 <p>When building a third-party application users will have to authorize via the OAuth authorization code flow. 
 Refer to our guide about <a href="doc:managing-third-party-clients-using-the-command-line">managing third-party clients</a> to learn how to obtain a <code>clientId</code> and <code>clientSecret</code>. After that your application will be able to query the sipgate REST API.  </p>
 <p>During the authorization process the user will be asked to grant permission to your client to access the REST API. The user will have the option to allow the access or cancel the authorization process.</p>
-<p><img alt="Grant screen" src="../img/grant_screen.png" /></p>
+<p><img alt="Grant screen" src="./../img/grant_screen.png" /></p>
 <p>You can find an example of how to implement this authorization flow in our <a href="../v2.0/docs/building-a-third-party-application-using-oauth-clients">rest api example</a>.</p>
 <h2 id="api-reference">API Reference</h2>
 <p>You can find our API Reference here:</p>
