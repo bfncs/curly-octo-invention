@@ -253,6 +253,26 @@
     Troubleshooting
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-debug-log" title="Enable debug log" class="md-nav__link">
+    Enable debug log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inspect-incoming-network-traffic" title="Inspect incoming network traffic" class="md-nav__link">
+    Inspect incoming network traffic
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -344,6 +364,26 @@
     Troubleshooting
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-debug-log" title="Enable debug log" class="md-nav__link">
+    Enable debug log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inspect-incoming-network-traffic" title="Inspect incoming network traffic" class="md-nav__link">
+    Inspect incoming network traffic
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -384,62 +424,15 @@
 <h2 id="api-reference-examples">API Reference &amp; Examples</h2>
 <p>https://github.com/sipgate/sipgate.io</p>
 <h2 id="troubleshooting">Troubleshooting</h2>
-<hr />
-<p>title: "Troubleshooting"
-excerpt: ""</p>
-<hr />
-<h1 id="enable-debug-log">Enable debug log</h1>
-<p>You can enable logging for debugging purposes from your dashboard. You will find each request and the corresponding response in the logging table.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/c46ea71-debug-sipgate-io-step1.png",
-        "debug-sipgate-io-step1.png",
-        1920,
-        948,
-        "#1c242c"
-      ],
-      "caption": "Click on \"Activate debug log\", read and confirm the security warning."
-    }
-  ]
-}
-[/block]</p>
-<p>[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/aee6e20-debug-sipgate-io-step3.png",
-        "debug-sipgate-io-step3.png",
-        1920,
-        946,
-        "#1c242c"
-      ],
-      "caption": "To view the logged requests, click on the icon within the \"Activate debug log\" row."
-    }
-  ]
-}
-[/block]</p>
-<p>[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/272c904-debug-sipgate-io-step3.png",
-        "debug-sipgate-io-step3.png",
-        1920,
-        939,
-        "#cccdce"
-      ],
-      "caption": "Your request should be logged and look like this."
-    }
-  ]
-}
-[/block]
-Inspect incoming network traffic
-========================</p>
+<h3 id="enable-debug-log">Enable debug log</h3>
+<p>You can enable logging for debugging purposes from your dashboard. You will find each request and the corresponding response in the logging table.</p>
+<p><img alt="Click on &quot;Activate debug log&quot;, read and confirm the security warning." src="../img/debug-sipgate-io-step1.png" /></p>
+<p>Click on "Activate debug log", read and confirm the security warning.</p>
+<p><img alt="To view the logged requests, click on the icon within the &quot;Activate debug log&quot; row." src="../img/debug-sipgate-io-step2.png" /></p>
+<p>To view the logged requests, click on the icon within the "Activate debug log" row.</p>
+<p><img alt="Your request should be logged and look like this." src="../img/debug-sipgate-io-step3.png" /></p>
+<p>Your request should be logged and look like this.</p>
+<h3 id="inspect-incoming-network-traffic">Inspect incoming network traffic</h3>
 <p>You can use <code>ngrep</code> to inspect incoming requests </p>
 <pre><code class="shell">sudo ngrep -dany -Wbyline port 3000
 </code></pre>
