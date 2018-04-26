@@ -99,3 +99,99 @@ Connection: keep-alive.
 <Response><Dial><Voicemail/></Dial></Response>
 #
 ``` 
+
+## A word about security
+
+### HTTP vs. HTTPS
+
+We strongly encourage you to use a HTTPS server. Although we support plain HTTP connections we do not recommend pushing sensitive call details over unencrypted connections. By default sipgate.io does not accept [self-signed certificates](http://stackoverflow.com/a/10176685). If you use simquadrat or sipgate basic, you can allow self-signed certs in your dashboard. In sipgate team you cannot make an exception.
+
+Furthermore, you can add your public certificate to protect the connection against man-in-the-middle attacks. Your certificate is validated by our server.
+
+In order to work your certificate has to be in the following format
+```
+-----BEGIN CERTIFICATE-----
+MIIDXTCCAkWgAwIBAgIJAJC1HiIAZAiIMA0GCSqGSIb3Df
+BAYTAkFVMRMwEQYDVQQIDApTb21lLVN0YXRlMSEwHwYDVx
+aWRnaXRzIFB0eSBMdGQwHhcNMTExMjMxMDg1OTQ0WhcNMT
+A .... MANY LINES LIKE THAT ....
+JjyzfN746vaInA1KxYEeI1Rx5KXY8zIdj6a7hhphpj2E04
+C3Fayua4DRHyZOLmlvQ6tIChY0ClXXuefbmVSDeUHwc8Yu
+B7xxt8BVc69rLeHV15A0qyx77CLSj3tCx2IUXVqRs5mlSb
+vA==
+-----END CERTIFICATE-----
+```
+
+### Authentication
+
+sipgate.io supports HTTP Basic Authentication. You can include your username and password within the URL (e.g. `https://username:password@example.com:8080`).
+
+
+## FAQ
+
+### What happens when a call is transferred?
+
+The transferred call is a new call. Scenario: Jennifer calls Doc Brown and Doc Brown transfers the call to Marty and Marty picks up. 
+ Here's what sipgate.io sends to your server:
+
+1. `newCall (user: Doc, callId: 12111955)`
+2. `answer (user: Doc, callId: 12111955)`
+  * `[Doc dials *3 <Marty's extension>]`
+3. `newCall (user: Marty, callId: 21102015, diversion: <Doc's number> from: <Jennifer's number>)`
+4. `answer (user: Marty, callId: 21102015, diversion: <Doc's number> from: <Jennifer's number>)`
+5. `hangup (user: Doc, callId: 12111955)`
+
+As you can see, the ```callId``` changes with the transfer.
+
+This is what sipgate.io sends, in case Marty does not pick up:
+
+1. `newCall (user: Doc, callId: 12111955)`
+2. `answer (user: Doc, callId: 12111955)`
+  * `[Doc dials *3 <Marty's extension>]`
+3. `newCall (user: Marty, callId: 21102015, diversion: <Doc's number> from: <Jennifer's number>)`
+4. `hangup (user: Marty, callId: 21102015)`
+
+### How is forwarding signaled?
+
+The forwarded call is handled as a new call. Let's assume the previous scenario: Jennifer calls Doc Brown but his line is busy so the call is forwarded to Marty who in turn picks up the call.  
+Here are the pushes sipgate.io will send to your server:
+
+1. `newCall (user: Doc, callId: 12111955)`
+2. `hangup (cause: forwarded, callId: 12111955)`
+3. `newCall (user: Marty, callId: 21102015, diversion: <Doc's number> from: <Jennifer's number>)`
+4. `answer (user: Marty, callId: 21102015, diversion: <Doc's number> from: <Jennifer's number>)`
+5. `hangup (user: Marty, callId: 21102015)`
+
+### I get a lot of event during forwards and transfers, do I have to pay for all of them?
+
+The answer is: It depends.  
+If you transfer or forward a call within the same sipgate account then the answer is no. But if you forward or transfer a call to a different sipgate account or an external number then those pushes are being billed to your account.
+
+
+## Setting up ngrok for local development
+
+### Make your project accessible from the internet
+
+The sipgate.io API cannot reach your project if the computer running it is behind a firewall. An easy way to circumvent this impediment is a tunnel service. [Ngrok](https://ngrok.com) is easy to use and offers a free service which is sufficient for our needs. Download and run ngrok now, to make your project available from the internet.
+
+Download ngrok for linux (amd64)
+
+```shell
+wget https://dl.ngrok.com/ngrok_2.0.17_linux_amd64.zip -O ngrok.zip
+```
+
+Download ngrok for osx
+
+```shell
+wget https://dl.ngrok.com/ngrok_2.0.17_darwin_amd64.zip -O ngrok.zip
+```
+Run ngrok
+
+```shell
+unzip ngrok.zip
+./ngrok http 9000
+```
+
+![Ngrok running](./img/ngrok-running.png)
+
+Ngrok builds the tunnel and shows the newly generated tunnel url. This url changes with every restart of ngrok. In this example our project is reachable on https://12345678.ngrok.io/.
