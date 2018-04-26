@@ -37,7 +37,7 @@ Refer to our guide about [managing third-party clients](doc:managing-third-party
 
 During the authorization process the user will be asked to grant permission to your client to access the REST API. The user will have the option to allow the access or cancel the authorization process.
 
-![Grant screen](./img/grant_screen.png)
+![Grant screen](../img/grant_screen.png)
 
 You can find an example of how to implement this authorization flow in our [rest api example](/v2.0/docs/building-a-third-party-application-using-oauth-clients).
 
