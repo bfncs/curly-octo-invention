@@ -1,3 +1,4 @@
-site_name: My Docs
+site_name: sipgate Developer
+site_description: Developer documentation for all sipgate APIs
 theme:
   name: 'material'
