@@ -241,6 +241,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#api-reference-examples" title="API Reference &amp; Examples" class="md-nav__link">
+    API Reference &amp; Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" title="Troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+</li>
+      
       
       
       
@@ -318,6 +332,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#api-reference-examples" title="API Reference &amp; Examples" class="md-nav__link">
+    API Reference &amp; Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" title="Troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+</li>
+      
       
       
       
@@ -345,22 +373,35 @@
 <p>Log into your shiny, new sipgate account and go to the Feature Store. You can find a link in the navigation.</p>
 <p><img alt="Within the Feature Store click on the sipgate.io feature. It should look like this." src="../img/configure-sipgate-io-step2.png" /></p>
 <p>Within the Feature Store click on the sipgate.io feature. It should look like this.</p>
-<p>!Click on the orange button to book the free feature and follow the confirmation process.(./img/configure-sipgate-io-step2.png)</p>
+<p><img alt="Click on the orange button to book the free feature and follow the confirmation process." src="../img/configure-sipgate-io-step3.png" /></p>
 <p>Click on the orange button to book the free feature and follow the confirmation process.</p>
 <h3 id="enable-webhooks">Enable webhooks</h3>
-<p>We will now show you how to configure your URLs.
+<p>We will now show you how to configure your URLs.</p>
+<p><img alt="Navigate to the sipgate.io category and click on &quot;Incoming calls&quot; or &quot;Outgoing calls&quot;." src="../img/configure-sipgate-io-step4.png" /></p>
+<p>Navigate to the sipgate.io category and click on "Incoming calls" or "Outgoing calls"</p>
+<p><img alt="Enter your URL and hit &quot;Save&quot;." src="../img/configure-sipgate-io-step5.png" /></p>
+<p>Enter your URL and hit "Save".</p>
+<h2 id="api-reference-examples">API Reference &amp; Examples</h2>
+<p>https://github.com/sipgate/sipgate.io</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<hr />
+<p>title: "Troubleshooting"
+excerpt: ""</p>
+<hr />
+<h1 id="enable-debug-log">Enable debug log</h1>
+<p>You can enable logging for debugging purposes from your dashboard. You will find each request and the corresponding response in the logging table.
 [block:image]
 {
   "images": [
     {
       "image": [
-        "https://files.readme.io/00cdda2-configure-sipgate-io-step4.png",
-        "configure-sipgate-io-step4.png",
+        "https://files.readme.io/c46ea71-debug-sipgate-io-step1.png",
+        "debug-sipgate-io-step1.png",
         1920,
-        952,
-        "#1b232b"
+        948,
+        "#1c242c"
       ],
-      "caption": "Navigate to the sipgate.io category and click on \"Incoming calls\" or \"Outgoing calls\"."
+      "caption": "Click on \"Activate debug log\", read and confirm the security warning."
     }
   ]
 }
@@ -370,17 +411,72 @@
   "images": [
     {
       "image": [
-        "https://files.readme.io/d78a158-configure-sipgate-io-step5.png",
-        "configure-sipgate-io-step5.png",
-        514,
-        507,
-        "#449cec"
+        "https://files.readme.io/aee6e20-debug-sipgate-io-step3.png",
+        "debug-sipgate-io-step3.png",
+        1920,
+        946,
+        "#1c242c"
       ],
-      "caption": "Enter your URL and hit \"Save\"."
+      "caption": "To view the logged requests, click on the icon within the \"Activate debug log\" row."
     }
   ]
 }
 [/block]</p>
+<p>[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/272c904-debug-sipgate-io-step3.png",
+        "debug-sipgate-io-step3.png",
+        1920,
+        939,
+        "#cccdce"
+      ],
+      "caption": "Your request should be logged and look like this."
+    }
+  ]
+}
+[/block]
+Inspect incoming network traffic
+========================</p>
+<p>You can use <code>ngrep</code> to inspect incoming requests </p>
+<pre><code class="shell">sudo ngrep -dany -Wbyline port 3000
+</code></pre>
+
+<p>The output should look like this</p>
+<pre><code>###
+T 10.42.42.42:42528 -&gt; 10.42.42.23:3000 [AP]
+POST / HTTP/1.1.
+Accept: application/xml, text/plain, text/html.
+Accept-Charset: utf-8.
+User-Agent: sipgate.io.
+X-SIPGATE-JOBS: http://www.sipgate.de/jobs.
+Content-Length: 84.
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8.
+Accept-Encoding: gzip,deflate.
+Host: gwen.fuglu.net:3000.
+Via: 1.1 localhost (squid/3.1.20).
+X-Forwarded-For: 217.10.77.113.
+Cache-Control: max-age=259200.
+Connection: keep-alive.
+.
+
+##
+T 10.42.42.42:42528 -&gt; 10.42.42.23:3000 [AP]
+event=newCall&amp;direction=in&amp;from=anonymous&amp;to=445603000514&amp;callId=4932215337270853042
+##
+T 10.42.42.23:3000 -&gt; 10.42.42.42:42528 [AP]
+HTTP/1.1 200 OK.
+X-Powered-By: Express.
+Content-Type: application/xml; charset=utf-8.
+Content-Length: 46.
+Date: Tue, 23 May 2017 11:27:11 GMT.
+Connection: keep-alive.
+.
+&lt;Response&gt;&lt;Dial&gt;&lt;Voicemail/&gt;&lt;/Dial&gt;&lt;/Response&gt;
+#
+</code></pre>
                 
                   
                 
