@@ -1,0 +1,1035 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Developer documentation for all sipgate APIs">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.3">
+    
+    
+      
+        <title>REST API - sipgate Developer</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.8d40d89b.css">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#rest-api" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="sipgate Developer" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                sipgate Developer
+              </span>
+              <span class="md-header-nav__topic">
+                REST API
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    sipgate Developer
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Push-API/" title="Push API" class="md-nav__link">
+      Push API
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        REST API
+      </label>
+    
+    <a href="./" title="REST API" class="md-nav__link md-nav__link--active">
+      REST API
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" title="Authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-authentication-for-scripts-using-basic-auth" title="Simple authentication for scripts using Basic Auth" class="md-nav__link">
+    Simple authentication for scripts using Basic Auth
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authenticating-users-in-third-party-applications" title="Authenticating users in third party applications" class="md-nav__link">
+    Authenticating users in third party applications
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-reference" title="API Reference" class="md-nav__link">
+    API Reference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oauth2-scopes" title="OAuth2 scopes" class="md-nav__link">
+    OAuth2 scopes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-time-call-manipulation" title="Real Time Call Manipulation" class="md-nav__link">
+    Real Time Call Manipulation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-real-time-call-manipulation" title="What is Real Time Call Manipulation?" class="md-nav__link">
+    What is Real Time Call Manipulation?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-callid" title="What is the callId?" class="md-nav__link">
+    What is the callId?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication_1" title="Authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-sipgate-authentication" title="Using sipgate authentication" class="md-nav__link">
+    Using sipgate authentication
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-oauth-20-authentication" title="Using OAuth 2.0 authentication" class="md-nav__link">
+    Using OAuth 2.0 authentication
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#authentication" title="Authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-authentication-for-scripts-using-basic-auth" title="Simple authentication for scripts using Basic Auth" class="md-nav__link">
+    Simple authentication for scripts using Basic Auth
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authenticating-users-in-third-party-applications" title="Authenticating users in third party applications" class="md-nav__link">
+    Authenticating users in third party applications
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-reference" title="API Reference" class="md-nav__link">
+    API Reference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oauth2-scopes" title="OAuth2 scopes" class="md-nav__link">
+    OAuth2 scopes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-time-call-manipulation" title="Real Time Call Manipulation" class="md-nav__link">
+    Real Time Call Manipulation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-real-time-call-manipulation" title="What is Real Time Call Manipulation?" class="md-nav__link">
+    What is Real Time Call Manipulation?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-callid" title="What is the callId?" class="md-nav__link">
+    What is the callId?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication_1" title="Authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-sipgate-authentication" title="Using sipgate authentication" class="md-nav__link">
+    Using sipgate authentication
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-oauth-20-authentication" title="Using OAuth 2.0 authentication" class="md-nav__link">
+    Using OAuth 2.0 authentication
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="rest-api">REST API</h1>
+<h2 id="authentication">Authentication</h2>
+<h3 id="simple-authentication-for-scripts-using-basic-auth">Simple authentication for scripts using Basic Auth</h3>
+<p>If you simply want to access your own data through the API you do not have to use oAuth authorization delegation. Simply use <a href="https://tools.ietf.org/html/rfc2617#section-2">Basic Auth</a> to access our API.</p>
+<p><strong>Attention:</strong> Never use Basic Auth, if you want to access the data of someone else in your app.</p>
+<p>To get basic information about your account you can query the <a href="ref:getaccount-1">/account</a> route:</p>
+<pre><code class="bash">curl \
+--request GET \
+--header &quot;Accept: application/json&quot; \
+--user &lt;your_sipgate_username&gt;:&lt;your_sipgate_password&gt; \
+https://api.sipgate.com/v2/account
+</code></pre>
+
+<p>Or you could send an SMS:</p>
+<pre><code class="bash">curl \
+--request POST \
+--header &quot;Content-Type: application/json' \
+--header &quot;Accept: application/json&quot; \
+--user &lt;your_sipgate_username&gt;:&lt;your_sipgate_password&gt; \
+--data '{&quot;smsId&quot;: &quot;&lt;your_sms_id&gt;&quot;, &quot;recipient&quot;: &quot;&lt;phone_number&gt;&quot;, &quot;message&quot;: &quot;I :love: sipgate!&quot;}' \
+https://api.sipgate.com/v2/sessions/sms
+</code></pre>
+
+<h3 id="authenticating-users-in-third-party-applications">Authenticating users in third party applications</h3>
+<p>When building a third-party application users will have to authorize via the OAuth authorization code flow. 
+Refer to our guide about <a href="doc:managing-third-party-clients-using-the-command-line">managing third-party clients</a> to learn how to obtain a <code>clientId</code> and <code>clientSecret</code>. After that your application will be able to query the sipgate REST API.  </p>
+<p>During the authorization process the user will be asked to grant permission to your client to access the REST API. The user will have the option to allow the access or cancel the authorization process.</p>
+<p><img alt="Grant screen" src="../img/grant_screen.png" /></p>
+<p>You can find an example of how to implement this authorization flow in our <a href="../v2.0/docs/building-a-third-party-application-using-oauth-clients">rest api example</a>.</p>
+<h2 id="api-reference">API Reference</h2>
+<p>You can find our API Reference here:</p>
+<p><a href="https://api.sipgate.com/v2/doc">https://api.sipgate.com/v2/doc</a></p>
+<p>You can find examples here:</p>
+<p><a href="https://github.com/sipgate/rest-api-examples">https://github.com/sipgate/rest-api-examples</a></p>
+<h2 id="oauth2-scopes">OAuth2 scopes</h2>
+<p>Scopes are used to grant an application different levels of access to data on behalf of the end user. As an example, the scope for sending SMS (<code>/sessions/sms</code>) is <code>sessions:sms:write</code>.</p>
+<blockquote>
+<p><strong>A word about security</strong></p>
+<p>It is generally a good idea to only use a minimal set of scopes to maximize security.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Scope name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>all</code></td>
+<td>Full access</td>
+</tr>
+<tr>
+<td><code>contacts:read</code></td>
+<td>Read contact information</td>
+</tr>
+<tr>
+<td><code>devices:localprefix:read</code></td>
+<td>Read your device settings for localprefix</td>
+</tr>
+<tr>
+<td><code>devices:sim:read</code></td>
+<td>Read your sim device settings</td>
+</tr>
+<tr>
+<td><code>devices:tariffannouncement:write</code></td>
+<td>Modify your device settings for tariff announcement</td>
+</tr>
+<tr>
+<td><code>phonelines:blockanonymous:read</code></td>
+<td>Read your block anonymous settings</td>
+</tr>
+<tr>
+<td><code>phonelines:blockanonymous:write</code></td>
+<td>Change your block anonymous settings</td>
+</tr>
+<tr>
+<td><code>phonelines:devices:write</code></td>
+<td>Modify your phone line devices</td>
+</tr>
+<tr>
+<td><code>phonelines:forwardings:read</code></td>
+<td>Read your phone line forwardings</td>
+</tr>
+<tr>
+<td><code>phonelines:read</code></td>
+<td>Read your phone line settings</td>
+</tr>
+<tr>
+<td><code>phonelines:sipgateio:read</code></td>
+<td>Read your phone line sipgate.io settings</td>
+</tr>
+<tr>
+<td><code>phonelines:sipgateio:write</code></td>
+<td>Modify your phone line sipgate.io settings</td>
+</tr>
+<tr>
+<td><code>phonelines:voicemails:greetings:write</code></td>
+<td>Modify your phone line voicemail greetings</td>
+</tr>
+<tr>
+<td><code>phonelines:voicemails:read</code></td>
+<td>Read your phone line voicemails</td>
+</tr>
+<tr>
+<td><code>phonelines:write</code></td>
+<td>Modify our phone line settings</td>
+</tr>
+<tr>
+<td><code>portings:read</code></td>
+<td>Read your portings</td>
+</tr>
+<tr>
+<td><code>push_device:register</code></td>
+<td>Register device for push notifications</td>
+</tr>
+<tr>
+<td><code>sessions:sms:write</code></td>
+<td>Send SMS</td>
+</tr>
+<tr>
+<td><code>settings:sipgateio:write</code></td>
+<td>Modify your sipgate.io settings</td>
+</tr>
+<tr>
+<td><code>sms:callerid:write</code></td>
+<td>Modify your short message services</td>
+</tr>
+<tr>
+<td><code>sms:write</code></td>
+<td>Modify your short message services</td>
+</tr>
+<tr>
+<td><code>users:read</code></td>
+<td>Read user information</td>
+</tr>
+<tr>
+<td><code>account:read</code></td>
+<td>Read account information</td>
+</tr>
+<tr>
+<td><code>account:write</code></td>
+<td>Modify your account</td>
+</tr>
+<tr>
+<td><code>addresses:read</code></td>
+<td>Read address information</td>
+</tr>
+<tr>
+<td><code>addresses:write</code></td>
+<td>Modify your addresses</td>
+</tr>
+<tr>
+<td><code>authorization:oauth:clients:read</code></td>
+<td>Read your oauth clients</td>
+</tr>
+<tr>
+<td><code>authorization:oauth:clients:write</code></td>
+<td>Modify your oauth clients</td>
+</tr>
+<tr>
+<td><code>balance:read</code></td>
+<td>Read balance information</td>
+</tr>
+<tr>
+<td><code>contacts:write</code></td>
+<td>Write contact information</td>
+</tr>
+<tr>
+<td><code>devices:callerid:read</code></td>
+<td>Read your device settings for callerId</td>
+</tr>
+<tr>
+<td><code>devices:callerid:write</code></td>
+<td>Modify your device settings for callerId</td>
+</tr>
+<tr>
+<td><code>devices:localprefix:write</code></td>
+<td>Modify your device settings for localprefix</td>
+</tr>
+<tr>
+<td><code>devices:read</code></td>
+<td>Read your devices</td>
+</tr>
+<tr>
+<td><code>devices:sim:write</code></td>
+<td>Modify your sim device settings</td>
+</tr>
+<tr>
+<td><code>devices:sims:orders:write</code></td>
+<td>Order new SIM cards</td>
+</tr>
+<tr>
+<td><code>devices:singlerowdisplay:read</code></td>
+<td>Read your device settings for single row display</td>
+</tr>
+<tr>
+<td><code>devices:singlerowdisplay:write</code></td>
+<td>Modify your device settings for single row display</td>
+</tr>
+<tr>
+<td><code>devices:tariffannouncement:read</code></td>
+<td>Read your device settings for tariff announcement</td>
+</tr>
+<tr>
+<td><code>devices:write</code></td>
+<td>Modify your devices</td>
+</tr>
+<tr>
+<td><code>faxlines:numbers:read</code></td>
+<td>Read your fax line numbers</td>
+</tr>
+<tr>
+<td><code>faxlines:read</code></td>
+<td>Read your fax line settings</td>
+</tr>
+<tr>
+<td><code>faxlines:write</code></td>
+<td>Modify your fax line settings</td>
+</tr>
+<tr>
+<td><code>groups:devices:write</code></td>
+<td>Modify your group devices</td>
+</tr>
+<tr>
+<td><code>groups:faxlines:read</code></td>
+<td>Read your group faxlines</td>
+</tr>
+<tr>
+<td><code>groups:numbers:read</code></td>
+<td>Read numbers routed to your groups</td>
+</tr>
+<tr>
+<td><code>groups:read</code></td>
+<td>Read your groups</td>
+</tr>
+<tr>
+<td><code>groups:users:read</code></td>
+<td>Read your group members</td>
+</tr>
+<tr>
+<td><code>groups:voicemails:read</code></td>
+<td>Read your group voicemails</td>
+</tr>
+<tr>
+<td><code>history:read</code></td>
+<td>Read your history</td>
+</tr>
+<tr>
+<td><code>history:write</code></td>
+<td>Modify your history</td>
+</tr>
+<tr>
+<td><code>notifications:read</code></td>
+<td>Read notifications</td>
+</tr>
+<tr>
+<td><code>notifications:write</code></td>
+<td>Modify notifications</td>
+</tr>
+<tr>
+<td><code>numbers:read</code></td>
+<td>Read your numbers</td>
+</tr>
+<tr>
+<td><code>numbers:write</code></td>
+<td>Route numbers to phone lines</td>
+</tr>
+<tr>
+<td><code>openid</code></td>
+<td>Identify you uniquely through your sipgate login</td>
+</tr>
+<tr>
+<td><code>phonelines:busyonbusy:read</code></td>
+<td>Read your busy on busy settings</td>
+</tr>
+<tr>
+<td><code>phonelines:busyonbusy:write</code></td>
+<td>Change your busy on busy settings</td>
+</tr>
+<tr>
+<td><code>phonelines:devices:read</code></td>
+<td>Read your phone line devices</td>
+</tr>
+<tr>
+<td><code>phonelines:forwardings:write</code></td>
+<td>Modify your phone line forwardings</td>
+</tr>
+<tr>
+<td><code>phonelines:numbers:read</code></td>
+<td>Read your phone line numbers</td>
+</tr>
+<tr>
+<td><code>phonelines:parallelforwardings:read</code></td>
+<td>Read your parallel forwardings</td>
+</tr>
+<tr>
+<td><code>phonelines:parallelforwardings:write</code></td>
+<td>Modify your parallel forwardings</td>
+</tr>
+<tr>
+<td><code>phonelines:sipgateio:log:read</code></td>
+<td>Read your phone line sipgate.io log</td>
+</tr>
+<tr>
+<td><code>phonelines:voicemails:greetings:read</code></td>
+<td>Read your phone line voicemail greetings</td>
+</tr>
+<tr>
+<td><code>phonelines:voicemails:write</code></td>
+<td>Modify your phone line voicemails</td>
+</tr>
+<tr>
+<td><code>portings:write</code></td>
+<td>Modify your portings</td>
+</tr>
+<tr>
+<td><code>sessions:calls:write</code></td>
+<td>Initiate phone calls</td>
+</tr>
+<tr>
+<td><code>sessions:fax:write</code></td>
+<td>Send Fax</td>
+</tr>
+<tr>
+<td><code>sessions:write</code></td>
+<td>Initiate sessions</td>
+</tr>
+<tr>
+<td><code>settings:read</code></td>
+<td>Read your settings</td>
+</tr>
+<tr>
+<td><code>settings:sipgateio:read</code></td>
+<td>Read your sipgate.io settings</td>
+</tr>
+<tr>
+<td><code>settings:write</code></td>
+<td>Modify your settings</td>
+</tr>
+<tr>
+<td><code>sms:callerid:read</code></td>
+<td>Read your short message services</td>
+</tr>
+<tr>
+<td><code>sms:read</code></td>
+<td>Read your short message services</td>
+</tr>
+<tr>
+<td><code>users:defaultdevice:write</code></td>
+<td>Modify your default device settings</td>
+</tr>
+</tbody>
+</table>
+<h2 id="real-time-call-manipulation">Real Time Call Manipulation</h2>
+<h3 id="what-is-real-time-call-manipulation">What is Real Time Call Manipulation?</h3>
+<p>The Real Time Call Manipulation API enables you to modify currently running calls. Every call has a <code>callId</code> and you can use this ID to modify the state of that call.</p>
+<h3 id="what-is-the-callid">What is the callId?</h3>
+<p>The <code>callId</code> will either be pushed to you by using a <a href="../v2.0/reference#the-post-request">Webhook</a>  (see <code>callId</code>) or you can obtain it by initiating a call using the <a href="../v2.0/reference#newcall">/sessions/calls</a> endpoint (see <code>sessionId</code>).</p>
+<h3 id="authentication_1">Authentication</h3>
+<p>You only have to add the <code>Authorization: Bearer &lt;access_token&gt;</code> header to your requests.
+There are currently two ways to obtain an <code>access_token</code>:</p>
+<h4 id="using-sipgate-authentication">Using sipgate authentication</h4>
+<p>You can obtain an <code>access_token</code> by using curl:</p>
+<pre><code class="shell"> curl \
+--request POST \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--header 'Accept: application/json' \
+--data-urlencode &quot;client_id=sipgate-app-web&quot; \
+--data-urlencode &quot;grant_type=password&quot; \
+--data-urlencode &quot;username=&lt;your_sipgate_email&gt;&quot; \
+--data-urlencode &quot;password=&lt;your_sipgate_username&gt;&quot; \
+https://api.sipgate.com/login/sipgate-apps/protocol/openid-connect/token
+</code></pre>
+
+<p>The response will contain a <code>token</code> which can be used as <code>access_token</code>:</p>
+<pre><code>{&quot;token&quot;:&quot;eyJ0eXAiOiJKV1....&quot;}
+</code></pre>
+
+<h2 id="using-oauth-20-authentication">Using OAuth 2.0 authentication</h2>
+<p>Read the chapter on <a href="doc:authentication">OAuth 2.0 Authentication</a> to obtain an <code>access_token</code>.</p>
+<h1 id="how-to-get-all-running-calls">How to get all running calls</h1>
+<p>You only need your <code>access_token</code> to call the <a href="../v2.0/reference#getcalls">/calls</a> endpoint.
+[block:code]
+{
+  "codes": [
+    {
+      "code": "curl \\n--verbose \\n--request GET \\n--header \"Authorization: Bearer <access_token>\" \\n--header \"Content-Type: application/json\" \\n--url https://api.sipgate.com/v2/calls",
+      "language": "shell"
+    }
+  ]
+}
+[/block]
+How to put a call on hold
+====================</p>
+<p>You can put all call participants on hold or retrieve them by using the <a href="../v1.0/reference#setcallhold">/calls/{callId}/hold</a> endpoint. All you need is the <code>callId</code> and your <code>access_token</code>:
+[block:code]
+{
+  "codes": [
+    {
+      "code": "# Hold                                           \ncurl \\n--verbose \                                   \n--request PUT \ \n--header \"Authorization: Bearer <access_token>\" \       \n--header \"Content-Type: application/json\" \\n--url https://api.sipgate.com/v2/calls/<callId>/hold \\n--data '{ \"value\": true }'                                                                                                                                                                                                                                   \n# Retrieve\ncurl \                                              \n--verbose \\n--request PUT \\n--header \"Authorization: Bearer <access_token>\" \\n--header \"Content-Type: application/json\" \\n--url https://api.sipgate.com/v2/calls/<callId>/hold \\n--data '{ \"value\": false }'",
+      "language": "shell"
+    }
+  ]
+}
+[/block]
+How to mute/unmute a call
+=====================</p>
+<p>You can use the <a href="../v2.0/reference#setcallmuted">/calls/{callId}/muted</a> endpoint to mute or unmute your microphone. All you need is the <code>callId</code> and your <code>access_token</code>:
+[block:code]
+{
+  "codes": [
+    {
+      "code": "# Mute\ncurl \\n--verbose \\n--request PUT \\n--header \"Authorization: Bearer <access_token>\" \\n--header \"Content-Type: application/json\" \\n--url https://api.sipgate.com/v2/calls/<callId>/muted \\n--data '{ \"value\": true }'\n\n# Unmute\ncurl \\n--verbose \\n--request PUT \\n--header \"Authorization: Bearer <access_token>\" \\n--header \"Content-Type: application/json\" \\n--url https://api.sipgate.com/v2/calls/<callId>/muted \\n--data '{ \"value\": false }'",
+      "language": "shell"
+    }
+  ]
+}
+[/block]
+How to transfer a call
+=================</p>
+<p>You can use the <a href="../v2.0/reference#transfercall">/calls/{callId}/transfer</a> endpoint to transfer your call to another party. You can choose between attended transfer and blind transfer. All you need is the <code>callId</code> and your <code>access_token</code>:
+[block:code]
+{
+  "codes": [
+    {
+      "code": "# Attended transfer\ncurl \\n--verbose \\n--request POST \\n--header \"Authorization: Bearer <access_token>\" \\n--header \"Content-Type: application/json\" \\n--url https://api.sipgate.com/v2/calls/<callId>/transfer \\n--data '{ \"attended\": true, \"phoneNumber\": \"+4915799912345\" }'\n\n# Blind transfer\ncurl \\n--verbose \\n--request POST \\n--header \"Authorization: Bearer <access_token>\" \\n--header \"Content-Type: application/json\" \\n--url https://api.sipgate.com/v2/calls/<callId>/transfer \\n--data '{ \"attended\": false, \"phoneNumber\": \"+4915799912345\" }'",
+      "language": "shell"
+    }
+  ]
+}
+[/block]
+How to record a call
+=================</p>
+<p>Use the <a href="../v2.0/reference#setcallrecording">/calls/{callId}/recording</a> endpoint to record a running call. 
+Pass <code>"value": true</code> to start the recording and <code>"value": false</code> to stop it.
+You can enable/disable the recording announcement by passing the <code>announcement</code> flag.
+[block:code]
+{
+  "codes": [
+    {
+      "code": "# Start recording with announcement\ncurl \\n--verbose \\n--request PUT \\n--header 'Authorization: Bearer <access_token>' \\n--header 'Content-Type: application/json' \\n--url https://api.sipgate.com/v2/calls/<callId>/recording \\n--data '{ \"value\": true, \"announcement\": true }'\n\n# Stop recording without announcement\ncurl \\n--verbose \\n--request PUT \\n--header 'Authorization: Bearer <access_token>' \\n--header 'Content-Type: application/json' \\n--url https://api.sipgate.com/v2/calls/<callId>/recording \\n--data '{ \"value\": false, \"announcement\": false }'",
+      "language": "shell"
+    }
+  ]
+}
+[/block]
+To retrieve the recorded file you can use the <a href="https://developer.sipgate.io/v2.0/reference#history">/v2/{userId}/history</a> endpoint (see <code>recordingUrl</code>). 
+[block:code]
+{
+  "codes": [
+    {
+      "code": "curl \\n--verbose \\n--header \"Authorization: Bearer <access_token>\" \\n--header \"Content-Type: application/json\" \\n--url https://api.sipgate.com/v2/<userId>/history?types=CALL",
+      "language": "shell"
+    }
+  ]
+}
+[/block]
+How to send DTMF (Dual-tone multi-frequency) sequences
+=================</p>
+<p>Use the <a href="../v2.0/reference#sendcalldtmf">/calls/{callId}/dtmf</a> endpoint to send a DTMF sequence to a running call:
+[block:code]
+{
+  "codes": [
+    {
+      "code": "curl \\n--verbose \\n--request POST \\n--header \"Authorization: Bearer <access_token>\" \\n--header \"Content-Type: application/json\" \\n--url https://api.sipgate.com/v2/calls/<callId>/dtmf \\n--data '{ \"sequence\": \"*12345#\" }'",
+      "language": "shell"
+    }
+  ]
+}
+[/block]
+How to play an audio file
+===================</p>
+<p>You can inject any WAV file into a running call by using the <a href="../v2.0/reference#startcallannouncement">/calls/{callId}/announcements</a> endpoint. All you need is the <code>callId</code>, a WAV file and your <code>access_token</code>:
+[block:code]
+{
+  "codes": [
+    {
+      "code": "curl \\n--verbose \\n--request POST \\n--header \"Authorization: Bearer <access_token>\" \\n--header \"Content-Type: application/json\" \\n--url https://api.sipgate.com/v2/calls/<callId>/announcements \\n--data '{ \"url\": \"https://static.sipgate.com/examples/wav/example.wav\" }'",
+      "language": "shell"
+    }
+  ]
+}
+[/block]
+<strong>Please note:</strong> Currently the sound file needs to be a mono 16bit PCM WAV file with a sampling rate of 8kHz. You can use conversion tools like the open source audio editor <a href="http://www.audacityteam.org/">Audacity</a> to convert any sound file to the correct format.</p>
+<p>Alternatively you could convert the file using <code>mpg123</code> on the command line:
+[block:code]
+{
+  "codes": [
+    {
+      "code": "mpg123 --rate 8000 --mono -w output.wav input.mp3",
+      "language": "shell"
+    }
+  ]
+}
+[/block]
+How to hang up a call
+=================</p>
+<p>Use the <a href="../v2.0/reference#hangupcall">DELETE /calls/{callId}</a> endpoint to terminate a running call. All you need is the <code>callId</code> and your <code>access_token</code>:</p>
+<p>[block:code]
+{
+  "codes": [
+    {
+      "code": "curl \\n--verbose \\n--request DELETE \\n--header \"Authorization: Bearer <access_token>\" \\n--header \"Content-Type: application/json\" \\n--url https://api.sipgate.com/v2/calls/<callId>",
+      "language": "shell"
+    }
+  ]
+}
+[/block]</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Push-API/" title="Push API" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Push API
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.b438e6c5.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

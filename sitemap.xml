@@ -9,4 +9,20 @@
     </url>
     
 
+    
+    <url>
+     <loc>/Push-API/</loc>
+     <lastmod>2018-04-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/REST-API/</loc>
+     <lastmod>2018-04-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
 </urlset>
